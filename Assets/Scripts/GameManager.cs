@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     // Static singleton property.
     public static GameManager Instance { get; private set; }
 
+    public static bool IsGameOver = false;
+
     public static int currentLevel;
 
     [SerializeField]
@@ -30,10 +32,6 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        int targetHeight = Screen.width * 9 / 16;
-
-        // Set the game's resolution to match the target width and height
-        Screen.SetResolution(Screen.width, targetHeight, false);
     }
 
     void OnEnable()
@@ -49,6 +47,8 @@ public class GameManager : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         currentLevel = Array.IndexOf(StaticData.Scenes, scene.name);
+
+        IsGameOver = false;
     }
 
     private void Update()

@@ -24,6 +24,9 @@ public class CatController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        if (!this.enabled) {
+            return;
+        }
         GameObject otherGameObject = other.gameObject;
         string layer = LayerMask.LayerToName(otherGameObject.layer);
 
@@ -38,6 +41,13 @@ public class CatController : MonoBehaviour
             IEnumerator coroutine = WaitAndJump(Random.Range(0.25f, 0.5f));
             StartCoroutine(coroutine);
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        GameObject otherGameObject = other.gameObject;
+        string layer = LayerMask.LayerToName(otherGameObject.layer);
+        Debug.Log(otherGameObject);
     }
 
     IEnumerator WaitAndJump(float seconds)

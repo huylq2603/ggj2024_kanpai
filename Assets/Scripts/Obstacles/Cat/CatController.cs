@@ -15,13 +15,6 @@ public class CatController : MonoBehaviour
         direction = 1;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        // if (Input.GetMouseButtonDown(0))
-        //     rb.AddForce(new Vector3(100, 100, 0));
-    }
-
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (!this.enabled) {
@@ -53,6 +46,6 @@ public class CatController : MonoBehaviour
     IEnumerator WaitAndJump(float seconds)
     {
         yield return new WaitForSeconds(seconds);
-        rb.AddForce(new Vector3(100 * direction, 100, 0));
+        rb.AddForce(new Vector3(200 * direction, 200, 0));
     }
 }

@@ -35,8 +35,8 @@ public class Controller : MonoBehaviour
         else if (Input.GetMouseButton(0))
         {
             delta = Input.mousePosition - lastPos;
-            Debug.Log($"X: {delta.x}; Y: {delta.y}");
-            Debug.Log($"Direction: {delta.normalized}");
+            //           Debug.Log($"X: {delta.x}; Y: {delta.y}");
+            //         Debug.Log($"Direction: {delta.normalized}");
             // Do Stuff here
 
             r2d.AddRelativeForce(delta.normalized * movementForce);
@@ -55,6 +55,6 @@ public class Controller : MonoBehaviour
             r2d.drag = movementDrag;
         }
 
-        Debug.Log($"Drag: {r2d.drag}");
+        //Debug.Log($"Drag: {r2d.drag}");
     }
 }

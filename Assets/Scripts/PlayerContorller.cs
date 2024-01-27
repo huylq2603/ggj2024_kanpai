@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D r2d;
     CapsuleCollider2D mainCollider;
     public GameObject gameOverObj;
+    public GameObject bossArmObj;
+    public GameObject mainGuyLongNeckObj;
     // Start is called before the first frame update
     void Start()
     {
@@ -150,8 +152,12 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("Win");
         freezeControl = true;
-        gameOverObj.SetActive(true);
-        yield return new WaitForSeconds(2f);
+        // gameOverObj.SetActive(true);
+        // TODO: win animation
+        bossArmObj.SetActive(true);
+        mainGuyLongNeckObj.SetActive(true);
+        GameManager.configWorldSpeed = 0;
+        yield return new WaitForSeconds(7f);
         GameManager.LoadNextScene();
     }
 

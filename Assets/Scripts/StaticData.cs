@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public static class StaticData
 {
-    public static readonly string[] Scenes = { "SampleScene", "Level1" };
+    public static readonly string[] Scenes = { "BarIntro", "AnimationIntro", "Level1Intro", "TestLevel" };
 
     public class Layer
     {

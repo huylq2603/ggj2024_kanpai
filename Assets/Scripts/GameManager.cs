@@ -59,11 +59,11 @@ public class GameManager : MonoBehaviour
 
     public void LoadNextScene()
     {
-        if (currentLevel == StaticData.Scenes.Length)
+        if (currentLevel >= StaticData.Scenes.Length - 1)
         {
             return;
         }
         string nextSceneName = StaticData.Scenes[currentLevel + 1];
-        SceneManager.LoadScene(nextSceneName);
+        SceneManager.LoadSceneAsync(nextSceneName);
     }
 }

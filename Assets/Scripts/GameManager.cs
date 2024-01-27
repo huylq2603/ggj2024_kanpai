@@ -27,7 +27,6 @@ public class GameManager : MonoBehaviour
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
-        GameManager.isInputEnable = true;
         currentLevel = Array.IndexOf(StaticData.Scenes, scene.name);
     }
 

@@ -18,7 +18,8 @@ public class PlayerProperty : MonoBehaviour
         string layer = LayerMask.LayerToName(otherGameObject.layer);
         if (layer.Equals(StaticData.Layer.Obstacle))
         {
-            health -= 3;
+            health -= 1;
+            Debug.Log(health + " health");
             StartCoroutine(PlayerHit());
         }
     }

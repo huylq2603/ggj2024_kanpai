@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4993569688436811205}
   - component: {fileID: 2983400060994942760}
   - component: {fileID: 7113397654642909767}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Invisible Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,7 +143,7 @@ GameObject:
   - component: {fileID: 2784223633319697717}
   - component: {fileID: 2393223786969178554}
   - component: {fileID: 12487122338104573}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Cat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,7 +159,7 @@ Transform:
   m_GameObject: {fileID: 210267644054410476}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 0, z: 0}
+  m_LocalPosition: {x: -2.39, y: 0.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -303,7 +303,7 @@ GameObject:
   - component: {fileID: 5930088399913408916}
   - component: {fileID: 8819159560681041156}
   - component: {fileID: 8222298845032366738}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: TriggerRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -492,7 +492,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7756958417731702138}
   - component: {fileID: 4000546663064664516}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}

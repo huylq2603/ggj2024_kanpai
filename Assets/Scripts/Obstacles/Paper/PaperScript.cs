@@ -16,7 +16,6 @@ public class PaperScript : MonoBehaviour
         r2d = GetComponent<Rigidbody2D>();
         InitialVelocity ??= new Vector2(Random.Range(-1f, 1f), Random.Range(0f, 1f)) * InitialVelocityMagnitude;
 
-        Debug.Log(InitialVelocity.Value);
         r2d.AddForce(InitialVelocity.Value);
     }
 

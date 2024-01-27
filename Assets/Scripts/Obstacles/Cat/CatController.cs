@@ -36,13 +36,6 @@ public class CatController : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        GameObject otherGameObject = other.gameObject;
-        string layer = LayerMask.LayerToName(otherGameObject.layer);
-        Debug.Log(otherGameObject);
-    }
-
     IEnumerator WaitAndJump(float seconds)
     {
         yield return new WaitForSeconds(seconds);

@@ -7,5 +7,6 @@ public static class StaticData
         public const string Environment = "Environment";
         public const string ObstacleEnvironment = "ObstacleEnvironment";
         public const string Wall = "Wall";
+        public const string Obstacle = "Obstacle";
     }
 }

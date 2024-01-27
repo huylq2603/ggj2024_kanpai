@@ -14,8 +14,6 @@ public class TriggerRange : MonoBehaviour
             GameObject parent = gameObject.transform.parent.gameObject;
             GameObject trigger = parent.transform.Find("Trigger").gameObject;
             trigger.SetActive(true);
-            Debug.Log("Hit " + parent);
-            Debug.Log("Hit Player");
         }
     }
 }

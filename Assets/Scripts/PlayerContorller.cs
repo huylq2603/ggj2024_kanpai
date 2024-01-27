@@ -6,6 +6,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public int health = 3;
+    public int drunkLevel = 0;
+
+    private readonly int MaxHealth = 3;
+
     public List<Sprite> mugSprites;
     SpriteRenderer sr;
     private bool freezeControl = false;
@@ -105,5 +109,16 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         rd.enabled = true;
         freezeControl = false;
+    }
+
+    public void AddHealth()
+    {
+        if (health < MaxHealth)
+        {
+            health += 1;
+            drunkLevel += 1;
+            Debug.Log($"Health: {health}");
+            Debug.Log($"Drunk level: {drunkLevel}");
+        }
     }
 }

@@ -12,12 +12,13 @@ public class GameManager : MonoBehaviour
 
     public static int currentLevel;
 
-    public static float configWorldSpeed = 1f;
+    [SerializeField]
+    public static float configWorldSpeed = 0.5f;
     public static float WorldSpeed
     {
         get
         {
-            return configWorldSpeed * 0.01f;
+            return configWorldSpeed * 0.1f;
         }
     }
 
@@ -25,6 +26,14 @@ public class GameManager : MonoBehaviour
     {
         // Save a reference to the AudioManager component as our //singleton instance.
         Instance = this;
+    }
+
+    void Start()
+    {
+        int targetHeight = Screen.width * 9 / 16;
+
+        // Set the game's resolution to match the target width and height
+        Screen.SetResolution(Screen.width, targetHeight, false);
     }
 
     void OnEnable()

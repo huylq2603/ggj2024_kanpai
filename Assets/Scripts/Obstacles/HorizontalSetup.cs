@@ -1,7 +1,6 @@
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public enum HorizontalScriptDirection
 {
@@ -40,7 +39,14 @@ public class HorizontalSetup : MonoBehaviour
         horizontalMovement.Speed = Speed;
         horizontalMovement.Target = Target;
 
-        Target.transform.SetPositionAndRotation(new Vector3(InitialPosition.x, Target.transform.position.y, Target.transform.position.z), quaternion.identity);
+
+        var randomXJitter = UnityEngine.Random.Range(-2f, 2f);
+        Target.transform.SetPositionAndRotation(new Vector3(InitialPosition.x + randomXJitter, Target.transform.position.y, Target.transform.position.z), quaternion.identity);
+
+        if (Direction == HorizontalScriptDirection.Left)
+        {
+            Target.GetComponent<SpriteRenderer>().flipX = true;
+        }
     }
 
     // Update is called once per frame

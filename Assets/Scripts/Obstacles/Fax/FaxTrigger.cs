@@ -18,10 +18,10 @@ public class FaxTrigger : MonoBehaviour
     {
         for (int i = 0; i < 3; i++)
         {
-            yield return new WaitForSeconds(0.5f);
             GameObject paperClone = Instantiate(Paper, Fax.transform);
 
             paperClone.transform.Find("Paper").GetComponent<PaperScript>().InitialVelocity = Vector2.zero;
+            yield return new WaitForSeconds(0.5f);
         }
     }
 }

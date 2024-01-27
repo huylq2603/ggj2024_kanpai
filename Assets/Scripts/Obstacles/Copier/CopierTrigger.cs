@@ -6,6 +6,8 @@ public class CopierTrigger : MonoBehaviour
 {
     GameObject copier;
     public GameObject paper;
+
+    public int numOfPaper = 3;
     // Start is called before the first frame update
     void Awake()
     {
@@ -14,7 +16,7 @@ public class CopierTrigger : MonoBehaviour
 
     void Start()
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < numOfPaper; i++)
         {
             Instantiate(paper, copier.transform);
         }

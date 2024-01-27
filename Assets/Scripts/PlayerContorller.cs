@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
 
     Rigidbody2D r2d;
     CapsuleCollider2D mainCollider;
+    public GameObject gameOverObj;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +35,9 @@ public class PlayerController : MonoBehaviour
         if (health <= 0)
         {
             Debug.Log("Game Over");
+            StartCoroutine(GameOver());
         }
+
         if (!freezeControl)
         {
             if (Input.GetMouseButtonDown(0))
@@ -68,11 +71,20 @@ public class PlayerController : MonoBehaviour
         //Debug.Log($"Drag: {r2d.drag}");
     }
 
+    private void OnCollisionEnter2D(Collision2D other) {
+        GameObject otherGameObject = other.gameObject;
+        string layer = LayerMask.LayerToName(otherGameObject.layer);
+        if (layer.Equals(StaticData.Layer.EndingGround) && health > 0)
+        {
+            StartCoroutine(ClearLevel());
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         GameObject otherGameObject = other.gameObject;
         string layer = LayerMask.LayerToName(otherGameObject.layer);
-        if (layer.Equals(StaticData.Layer.Obstacle))
+        if (layer.Equals(StaticData.Layer.Obstacle) && !freezeControl)
         {
             ProcessPlayerHit();
         }
@@ -105,5 +117,37 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         rd.enabled = true;
         freezeControl = false;
+    }
+
+    IEnumerator GameOver()
+    {
+        freezeControl = true;
+        Renderer rd = GetComponent<Renderer>();
+        rd.enabled = false;
+        yield return new WaitForSeconds(0.1f);
+        rd.enabled = true;
+        yield return new WaitForSeconds(0.1f);
+        rd.enabled = false;
+        yield return new WaitForSeconds(0.1f);
+        rd.enabled = true;
+        yield return new WaitForSeconds(0.1f);
+        rd.enabled = false;
+        yield return new WaitForSeconds(0.1f);
+        rd.enabled = true;
+        GameManager.configWorldSpeed = 0;
+        yield return new WaitForSeconds(1.5f);
+        gameOverObj.SetActive(true);
+        GameManager.configWorldSpeed = 0.5f;
+        yield return new WaitForSeconds(4f);
+        GameManager.LoadNextScene(true);
+    }
+
+    IEnumerator ClearLevel()
+    {
+        Debug.Log("Win");
+        freezeControl = true;
+        gameOverObj.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        GameManager.LoadNextScene();
     }
 }

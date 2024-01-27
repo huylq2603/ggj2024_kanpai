@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public static class StaticData
 {
-    public static readonly string[] Scenes = { "BarIntro", "AnimationIntro", "Level1Intro", "TestLevel" };
+    public static readonly string[] Scenes = { "BarIntro", "AnimationIntro", "Level1Intro", "Level1", "TestLevel" };
 
     public class Layer
     {
@@ -12,5 +12,6 @@ public static class StaticData
         public const string ObstacleEnvironment = "ObstacleEnvironment";
         public const string Wall = "Wall";
         public const string Obstacle = "Obstacle";
+        public const string EndingGround = "EndingGround";
     }
 }

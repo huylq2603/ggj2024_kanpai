@@ -57,13 +57,13 @@ public class GameManager : MonoBehaviour
             LoadNextScene();
     }
 
-    public void LoadNextScene()
+    public static void LoadNextScene(bool isReload = false)
     {
-        if (currentLevel >= StaticData.Scenes.Length - 1)
+        if (currentLevel >= StaticData.Scenes.Length - 1 && !isReload)
         {
             return;
         }
-        string nextSceneName = StaticData.Scenes[currentLevel + 1];
+        string nextSceneName = StaticData.Scenes[isReload ? currentLevel : currentLevel + 1];
         SceneManager.LoadSceneAsync(nextSceneName);
     }
 }

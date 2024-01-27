@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5419647031776746273}
   - component: {fileID: 643304412094117286}
   - component: {fileID: 4358815709690105029}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Paper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,7 +143,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -171,7 +171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6132c705e5fd4d10b29fa9d0b2f3458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitialVelocityMagnitude: 10
 --- !u!1 &7770257434577275053
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,7 +181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7998787584101670204}
   - component: {fileID: 118085725747372074}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ObjPaper
   m_TagString: Untagged
   m_Icon: {fileID: 0}

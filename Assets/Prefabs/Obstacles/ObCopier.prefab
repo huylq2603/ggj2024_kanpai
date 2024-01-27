@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 6760715646612706100}
   - component: {fileID: 9221926456901054078}
   m_Layer: 8
-  m_Name: ObjCopier
+  m_Name: ObCopier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

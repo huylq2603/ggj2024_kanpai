@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 7998787584101670204}
   - component: {fileID: 118085725747372074}
   m_Layer: 8
-  m_Name: ObjPaper
+  m_Name: ObPaper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -5,6 +5,7 @@ public static class StaticData
     public class Layer {
         public const string Player = "Player";
         public const string Environment = "Environment";
+        public const string ObstacleEnvironment = "ObstacleEnvironment";
         public const string Wall = "Wall";
     }
 }

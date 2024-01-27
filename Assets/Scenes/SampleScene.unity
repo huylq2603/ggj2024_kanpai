@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 480411266}
   - component: {fileID: 480411265}
   - component: {fileID: 480411264}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: RightWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -360,7 +360,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 167592288585252623, guid: 29d46aec1b2244bff8629d27e753f084, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 210267644054410476, guid: 29d46aec1b2244bff8629d27e753f084, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2570745468745296798, guid: 29d46aec1b2244bff8629d27e753f084, type: 3}
       propertyPath: m_LocalPosition.x
@@ -370,13 +374,41 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.43
       objectReference: {fileID: 0}
+    - target: {fileID: 2962461870343745032, guid: 29d46aec1b2244bff8629d27e753f084, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2983400060994942760, guid: 29d46aec1b2244bff8629d27e753f084, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2983400060994942760, guid: 29d46aec1b2244bff8629d27e753f084, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2983400060994942760, guid: 29d46aec1b2244bff8629d27e753f084, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2983400060994942760, guid: 29d46aec1b2244bff8629d27e753f084, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4000546663064664516, guid: 29d46aec1b2244bff8629d27e753f084, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 900686068}
+    - target: {fileID: 5930088399913408916, guid: 29d46aec1b2244bff8629d27e753f084, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6025073580164857084, guid: 29d46aec1b2244bff8629d27e753f084, type: 3}
       propertyPath: m_Name
       value: Cat2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6046881371943317261, guid: 29d46aec1b2244bff8629d27e753f084, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6394508362206330750, guid: 29d46aec1b2244bff8629d27e753f084, type: 3}
       propertyPath: m_LocalPosition.x
@@ -492,9 +524,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 139658598052701525, guid: 9003e168b3a3c4ac99df874fb4764a0d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 7770257434577275053, guid: 9003e168b3a3c4ac99df874fb4764a0d, type: 3}
       propertyPath: m_Name
       value: ObjPaper
+      objectReference: {fileID: 0}
+    - target: {fileID: 7770257434577275053, guid: 9003e168b3a3c4ac99df874fb4764a0d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7998787584101670204, guid: 9003e168b3a3c4ac99df874fb4764a0d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -552,7 +592,7 @@ GameObject:
   - component: {fileID: 2110921300}
   - component: {fileID: 2110921299}
   - component: {fileID: 2110921298}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: LeftWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}

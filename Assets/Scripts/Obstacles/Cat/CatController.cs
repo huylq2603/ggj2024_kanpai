@@ -28,7 +28,7 @@ public class CatController : MonoBehaviour
             direction = -1;
         }
 
-        if (layer.Equals(StaticData.Layer.Environment))
+        if (layer.Equals(StaticData.Layer.ObstacleEnvironment))
         {
             rb.velocity = new Vector2(0, 0);
             IEnumerator coroutine = WaitAndJump(Random.Range(0.25f, 0.5f));

@@ -12,7 +12,14 @@ public class GameManager : MonoBehaviour
 
     public static int currentLevel;
 
-    public static float worldSpeed = 1f;
+    public static float configWorldSpeed = 1f;
+    public static float WorldSpeed
+    {
+        get
+        {
+            return configWorldSpeed * 0.001f;
+        }
+    }
 
     void Awake()
     {

@@ -15,6 +15,6 @@ public class WorldController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log($"WorldSpeed {GameManager.worldSpeed}");
+        transform.Translate(Vector3.up * GameManager.WorldSpeed);
     }
 }

@@ -12,32 +12,39 @@ public class GameManager : MonoBehaviour
 
     public static int currentLevel;
 
+    public static float worldSpeed = 1f;
+
     void Awake()
     {
         // Save a reference to the AudioManager component as our //singleton instance.
         Instance = this;
     }
 
-    void OnEnable() {
+    void OnEnable()
+    {
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
-    
-    void OnDisable() {
+
+    void OnDisable()
+    {
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
         currentLevel = Array.IndexOf(StaticData.Scenes, scene.name);
     }
 
-    private void Update() {
+    private void Update()
+    {
         if (Input.GetMouseButtonDown(1))
             LoadNextScene();
     }
 
     public void LoadNextScene()
     {
-        if(currentLevel == StaticData.Scenes.Length) {
+        if (currentLevel == StaticData.Scenes.Length)
+        {
             return;
         }
         string nextSceneName = StaticData.Scenes[currentLevel + 1];

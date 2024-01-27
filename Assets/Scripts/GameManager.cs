@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     {
         get
         {
-            return configWorldSpeed * 0.001f;
+            return configWorldSpeed * 0.01f;
         }
     }
 

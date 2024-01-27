@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4138749933073266736}
   - component: {fileID: 7815106300956900182}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 4148655863913145019}
   - component: {fileID: 863369986235197612}
   - component: {fileID: 3945562314323869982}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: TriggerRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4625761024038020504}
   - component: {fileID: 2720298286978227219}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Copier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6760715646612706100}
   - component: {fileID: 9221926456901054078}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ObCopier
   m_TagString: Untagged
   m_Icon: {fileID: 0}

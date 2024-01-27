@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Controller : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     public int health = 3;
     private bool freezeControl = false;
@@ -28,7 +28,8 @@ public class Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health <= 0) {
+        if (health <= 0)
+        {
             Debug.Log("Game Over");
         }
         if (!freezeControl)

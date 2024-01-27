@@ -1,22 +1,17 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.Mathematics;
 using UnityEngine;
 
 public class FaxTrigger : MonoBehaviour
 {
-    public GameObject paper;
+    public GameObject Paper;
+    private GameObject Fax;
 
     void Start()
     {
+        Fax = transform.parent.Find("Fax").gameObject;
+
         IEnumerator coroutine = PrintPaper();
         StartCoroutine(coroutine);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     IEnumerator PrintPaper()
@@ -24,8 +19,8 @@ public class FaxTrigger : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             yield return new WaitForSeconds(0.5f);
-            Debug.Log(transform);
-            GameObject paperClone = Instantiate(paper, transform.parent.transform);
+            GameObject paperClone = Instantiate(Paper, Fax.transform);
+
             paperClone.transform.Find("Paper").GetComponent<PaperScript>().InitialVelocity = Vector2.zero;
         }
     }

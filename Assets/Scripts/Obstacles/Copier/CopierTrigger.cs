@@ -16,7 +16,7 @@ public class CopierTrigger : MonoBehaviour
     {
         for (int i = 0; i < 3; i++)
         {
-            Instantiate(paper, transform);
+            Instantiate(paper, copier.transform);
         }
     }
 

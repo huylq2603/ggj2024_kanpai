@@ -38,9 +38,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health <= 0)
+        if (!GameManager.IsGameOver && health <= 0)
         {
             Debug.Log("Game Over");
+            GameManager.IsGameOver = true;
             StartCoroutine(GameOver());
         }
 
@@ -77,7 +78,8 @@ public class PlayerController : MonoBehaviour
         //Debug.Log($"Drag: {r2d.drag}");
     }
 
-    private void OnCollisionEnter2D(Collision2D other) {
+    private void OnCollisionEnter2D(Collision2D other)
+    {
         GameObject otherGameObject = other.gameObject;
         string layer = LayerMask.LayerToName(otherGameObject.layer);
         if (layer.Equals(StaticData.Layer.EndingGround) && health > 0)

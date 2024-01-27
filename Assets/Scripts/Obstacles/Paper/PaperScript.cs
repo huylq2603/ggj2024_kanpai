@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Paper : MonoBehaviour
+public class PaperScript : MonoBehaviour
 {
-    private Vector2 InitialVelocity = Vector2.zero;
+    public Vector2? InitialVelocity;
+
     private float InitialVelocityMagnitude = 500f;
 
     private Rigidbody2D r2d;
@@ -13,9 +14,10 @@ public class Paper : MonoBehaviour
     void Start()
     {
         r2d = GetComponent<Rigidbody2D>();
-        InitialVelocity = new Vector2(Random.Range(-1f, 1f), Random.Range(0f, 1f)) * InitialVelocityMagnitude;
-        Debug.Log(InitialVelocity);
-        r2d.AddForce(InitialVelocity);
+        InitialVelocity ??= new Vector2(Random.Range(-1f, 1f), Random.Range(0f, 1f)) * InitialVelocityMagnitude;
+
+        Debug.Log(InitialVelocity.Value);
+        r2d.AddForce(InitialVelocity.Value);
     }
 
     // Update is called once per frame

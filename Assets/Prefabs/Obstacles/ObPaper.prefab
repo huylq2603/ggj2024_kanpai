@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3096628429827772193}
   - component: {fileID: 5419647031776746273}
   - component: {fileID: 643304412094117286}
-  - component: {fileID: 4358815709690105029}
+  - component: {fileID: 5811588858527160373}
   m_Layer: 8
   m_Name: Paper
   m_TagString: Untagged
@@ -159,7 +159,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &4358815709690105029
+--- !u!114 &5811588858527160373
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

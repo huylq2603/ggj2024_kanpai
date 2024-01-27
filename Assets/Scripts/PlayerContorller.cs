@@ -6,6 +6,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public int health = 3;
+    public List<Sprite> mugSprites;
+    SpriteRenderer sr;
     private bool freezeControl = false;
     public float movementForce;
     public float movementDrag;
@@ -23,6 +25,7 @@ public class PlayerController : MonoBehaviour
         mainCollider = GetComponent<CapsuleCollider2D>();
         r2d.freezeRotation = true;
         r2d.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+        sr = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -71,13 +74,19 @@ public class PlayerController : MonoBehaviour
         string layer = LayerMask.LayerToName(otherGameObject.layer);
         if (layer.Equals(StaticData.Layer.Obstacle))
         {
-            health -= 1;
-            Debug.Log(health + " health");
-            r2d.drag = movementDrag;
-            r2d.velocity = Vector2.zero;
-            r2d.AddRelativeForce(Vector2.up * 100);
-            StartCoroutine(PlayerHit());
+            ProcessPlayerHit();
         }
+    }
+
+    private void ProcessPlayerHit()
+    {
+        health -= 1;
+        Debug.Log(health + " health");
+        sr.sprite = mugSprites[health];
+        r2d.drag = movementDrag;
+        r2d.velocity = Vector2.zero;
+        r2d.AddRelativeForce(Vector2.up * 100);
+        StartCoroutine(PlayerHit());
     }
 
     IEnumerator PlayerHit()

@@ -185,6 +185,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
+  mugSprites:
+  - {fileID: -373101426, guid: 08a7816fe6f72584b801321605fe860c, type: 3}
+  - {fileID: 299857601, guid: 08a7816fe6f72584b801321605fe860c, type: 3}
+  - {fileID: -1155870781, guid: 08a7816fe6f72584b801321605fe860c, type: 3}
+  - {fileID: 1126145582, guid: 08a7816fe6f72584b801321605fe860c, type: 3}
   movementForce: 10
   movementDrag: 1
   dragtolerance: 0

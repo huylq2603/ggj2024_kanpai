@@ -50,8 +50,6 @@ public class PlayerController : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 lastPos = Input.mousePosition;
-
-
             }
             else if (Input.GetMouseButton(0))
             {
@@ -60,15 +58,49 @@ public class PlayerController : MonoBehaviour
                 //         Debug.Log($"Direction: {delta.normalized}");
                 // Do Stuff here
 
-                r2d.AddRelativeForce(delta.normalized * movementForce);
+                float dragForce = 1f;
+                switch (drunkLevel)
+                {
+                    case 0:
+                        break;
+                    case 1:
+                        dragForce = 0.8f;
+                        break;
+                    default:
+                        dragForce = 0.5f;
+                        break;
+                }
+
+                r2d.AddRelativeForce(delta.normalized * movementForce * dragForce);
 
                 // End do stuff
 
                 lastPos = Input.mousePosition;
             }
+
             if (!Input.GetMouseButton(0) && r2d.velocity.magnitude > 0)
             {
-                r2d.drag = 100f;
+                float dragValue = 100f;
+
+                switch (drunkLevel)
+                {
+                    case 0:
+                        break;
+                    case 1:
+                        dragValue = 5f;
+                        break;
+                    case 2:
+                        dragValue = 2f;
+                        break;
+                    case 3:
+                        dragValue = 0.5f;
+                        break;
+                    default:
+                        dragValue = 0.2f;
+                        break;
+                }
+
+                r2d.drag = dragValue;
             }
             else
             {

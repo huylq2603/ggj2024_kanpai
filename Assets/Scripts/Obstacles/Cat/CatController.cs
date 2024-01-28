@@ -24,7 +24,7 @@ public class CatController : MonoBehaviour
         GameObject otherGameObject = other.gameObject;
         string layer = LayerMask.LayerToName(otherGameObject.layer);
 
-        if (layer.Equals(StaticData.Layer.ObstacleWall))
+        if (layer.Equals(StaticData.Layer.ObstacleWall) || layer.Equals(StaticData.Layer.Obstacle))
         {
             direction = -direction;
         }

@@ -24,6 +24,11 @@ public class CameraScaler : MonoBehaviour
         orthoSize = cam.orthographicSize;
     }
 
+    protected void OnPreCull()
+    {
+        GL.Clear(true, true, Color.black);
+    }
+
     protected void Update()
     {
         if (Screen.width != lastWidth || Screen.height != lastHeight)

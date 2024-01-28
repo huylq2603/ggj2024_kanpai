@@ -1,0 +1,1 @@
+Credits to: https://github.com/wmjoers/CameraScaler

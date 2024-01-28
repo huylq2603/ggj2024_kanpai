@@ -322,11 +322,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3351791805966480584, guid: 49e6952fea3041744b0ccb2edf78daed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.65
+      value: -3.12
       objectReference: {fileID: 0}
     - target: {fileID: 3351791805966480584, guid: 49e6952fea3041744b0ccb2edf78daed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.61
+      value: 10.82
       objectReference: {fileID: 0}
     - target: {fileID: 3351791805966480584, guid: 49e6952fea3041744b0ccb2edf78daed, type: 3}
       propertyPath: m_LocalPosition.z
@@ -360,9 +360,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6551932617949886941, guid: 49e6952fea3041744b0ccb2edf78daed, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6551932617949886941, guid: 49e6952fea3041744b0ccb2edf78daed, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 88826925
+      objectReference: {fileID: 0}
+    - target: {fileID: 7673978406728748767, guid: 49e6952fea3041744b0ccb2edf78daed, type: 3}
+      propertyPath: playerBeerMugPos
+      value: 
+      objectReference: {fileID: 1581507266}
+    - target: {fileID: 7815591853069260337, guid: 49e6952fea3041744b0ccb2edf78daed, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815591853069260337, guid: 49e6952fea3041744b0ccb2edf78daed, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 88826925
+      objectReference: {fileID: 0}
     - target: {fileID: 8642909805566327505, guid: 49e6952fea3041744b0ccb2edf78daed, type: 3}
       propertyPath: m_Name
       value: BossArm
+      objectReference: {fileID: 0}
+    - target: {fileID: 8642909805566327505, guid: 49e6952fea3041744b0ccb2edf78daed, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -662,9 +686,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainGuyLongNeck
       objectReference: {fileID: 0}
+    - target: {fileID: 2701578277269095938, guid: 12c19658217488847b474d14e24b5113, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6701587752102346964, guid: 12c19658217488847b474d14e24b5113, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.1783276
+      value: 7.99
       objectReference: {fileID: 0}
     - target: {fileID: 6701587752102346964, guid: 12c19658217488847b474d14e24b5113, type: 3}
       propertyPath: m_LocalPosition.y

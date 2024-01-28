@@ -8,6 +8,7 @@ public class AnimationController : MonoBehaviour
     int currentFrame = 0;
 
     public AudioClip naniSound;
+    public AudioClip naniBossSound;
     
     AudioSource audioSrc;
 
@@ -25,6 +26,9 @@ public class AnimationController : MonoBehaviour
                 frames[++currentFrame].SetActive(true);
                 if (currentFrame == 2) {
                     audioSrc.PlayOneShot(naniSound);
+                }
+                if (currentFrame == 3) {
+                    audioSrc.PlayOneShot(naniBossSound);
                 }
             } else {
                 GameManager.LoadNextScene();

@@ -26,7 +26,8 @@ public class PlayerController : MonoBehaviour
     public GameObject bossArmObj;
     public GameObject mainGuyLongNeckObj;
 
-    public AudioClip refillSound;
+    public AudioClip ehSound;
+    public AudioClip wastedSound;
     AudioSource audioSrc;
     // Start is called before the first frame update
     void Start()
@@ -128,6 +129,7 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         GameObject otherGameObject = other.gameObject;
+        Destroy(otherGameObject);
         string layer = LayerMask.LayerToName(otherGameObject.layer);
         if (layer.Equals(StaticData.Layer.Obstacle) && !freezeControl)
         {
@@ -137,7 +139,11 @@ public class PlayerController : MonoBehaviour
 
     private void ProcessPlayerHit()
     {
+        if (GameManager.IsGameOver) {
+            return;
+        }
         health -= 1;
+        audioSrc.PlayOneShot(ehSound);
         Debug.Log(health + " health");
         sr.sprite = mugSprites[health];
         r2d.drag = movementDrag;
@@ -166,6 +172,7 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator GameOver()
     {
+        audioSrc.PlayOneShot(wastedSound);
         freezeControl = true;
         Renderer rd = GetComponent<Renderer>();
         rd.enabled = false;
@@ -206,7 +213,6 @@ public class PlayerController : MonoBehaviour
         {
             health += 1;
             sr.sprite = mugSprites[health];
-            audioSrc.PlayOneShot(refillSound);
             drunkLevel += 1;
             Debug.Log($"Health: {health}");
             Debug.Log($"Drunk level: {drunkLevel}");

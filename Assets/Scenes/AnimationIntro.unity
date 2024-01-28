@@ -243,6 +243,7 @@ MonoBehaviour:
   - {fileID: 749705125}
   - {fileID: 1556507862}
   naniSound: {fileID: 8300000, guid: 31ba9e9f77dd2f3499af9d24389d3219, type: 3}
+  naniBossSound: {fileID: 8300000, guid: 9195f68c2c6e02245a1dd88e31bf4e9a, type: 3}
 --- !u!4 &1060876981
 Transform:
   m_ObjectHideFlags: 0

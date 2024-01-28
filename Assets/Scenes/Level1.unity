@@ -1278,6 +1278,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameOverObj
       objectReference: {fileID: 0}
+    - target: {fileID: 6027351760394029247, guid: 0d2f5df90a62f1640928b02cdfbe66d7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

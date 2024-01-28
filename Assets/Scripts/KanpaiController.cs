@@ -6,7 +6,12 @@ public class KanpaiController : MonoBehaviour
 {
     public float smallScale;
     public float bigScale;
+    public AudioClip kanpaiSound;
+    AudioSource audioSrc;
     // Start is called before the first frame update
+    private void Awake() {
+        audioSrc = GetComponent<AudioSource>();
+    }
     void Start()
     {
         StartCoroutine(Pulsing());
@@ -17,7 +22,7 @@ public class KanpaiController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            GameManager.LoadNextScene();
+            StartCoroutine(StartNextScene());
         }
     }
 
@@ -30,5 +35,11 @@ public class KanpaiController : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             transform.localScale = new Vector3(smallScale, smallScale, 0);
         };
+    }
+    IEnumerator StartNextScene()
+    {
+        audioSrc.PlayOneShot(kanpaiSound);
+        yield return new WaitForSeconds(1f);
+        GameManager.LoadNextScene();
     }
 }

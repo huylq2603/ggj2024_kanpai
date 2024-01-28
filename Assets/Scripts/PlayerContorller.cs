@@ -25,6 +25,9 @@ public class PlayerController : MonoBehaviour
     public GameObject gameOverObj;
     public GameObject bossArmObj;
     public GameObject mainGuyLongNeckObj;
+
+    public AudioClip refillSound;
+    AudioSource audioSrc;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +36,7 @@ public class PlayerController : MonoBehaviour
         r2d.freezeRotation = true;
         r2d.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         sr = GetComponent<SpriteRenderer>();
+        audioSrc = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -202,6 +206,7 @@ public class PlayerController : MonoBehaviour
         {
             health += 1;
             sr.sprite = mugSprites[health];
+            audioSrc.PlayOneShot(refillSound);
             drunkLevel += 1;
             Debug.Log($"Health: {health}");
             Debug.Log($"Drunk level: {drunkLevel}");

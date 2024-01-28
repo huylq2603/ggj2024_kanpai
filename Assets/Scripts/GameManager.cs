@@ -54,7 +54,13 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         if (Input.GetKey(KeyCode.Space))
+        {
             LoadNextScene();
+        }
+        if (Input.GetKey(KeyCode.Q))
+        {
+            Application.Quit();
+        }
     }
 
     public static void LoadNextScene(bool isReload = false)

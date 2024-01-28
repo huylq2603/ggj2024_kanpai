@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public List<Sprite> mugSprites;
     SpriteRenderer sr;
     private bool freezeControl = false;
+    private bool isInvincible = false;
     public float movementForce;
     public float movementDrag;
     public float dragtolerance = 0;
@@ -131,7 +132,7 @@ public class PlayerController : MonoBehaviour
         GameObject otherGameObject = other.gameObject;
         Destroy(otherGameObject);
         string layer = LayerMask.LayerToName(otherGameObject.layer);
-        if (layer.Equals(StaticData.Layer.Obstacle) && !freezeControl)
+        if (layer.Equals(StaticData.Layer.Obstacle) && !isInvincible)
         {
             ProcessPlayerHit();
         }
@@ -154,6 +155,7 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator PlayerHit()
     {
+        isInvincible = true;
         freezeControl = true;
         Renderer rd = GetComponent<Renderer>();
         rd.enabled = false;
@@ -168,6 +170,8 @@ public class PlayerController : MonoBehaviour
         rd.enabled = false;
         yield return new WaitForSeconds(0.1f);
         rd.enabled = true;
+        yield return new WaitForSeconds(1f);
+        isInvincible = false;
     }
 
     IEnumerator GameOver()
@@ -187,7 +191,7 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         rd.enabled = true;
         GameManager.configWorldSpeed = 0;
-        yield return new WaitForSeconds(1.5f);
+        // yield return new WaitForSeconds(1.5f);
         gameOverObj.SetActive(true);
         GameManager.configWorldSpeed = 0.5f;
         yield return new WaitForSeconds(4f);

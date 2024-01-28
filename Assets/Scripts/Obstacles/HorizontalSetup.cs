@@ -14,20 +14,25 @@ public class HorizontalSetup : MonoBehaviour
     public float Speed = 1f;
     public GameObject Target;
 
+    private float RandomRangeLimit = 5f;
     private Vector3 InitialPosition;
     // Start is called before the first frame update
     void Start()
     {
-        var VectorDirection = Vector2.zero;
+        Vector2 vectorDirection;
+        var randomXJitter = 0f;
+
         switch (Direction)
         {
             case HorizontalScriptDirection.Left:
-                VectorDirection = Vector2.left;
+                vectorDirection = Vector2.left;
                 InitialPosition = new Vector3(12f, 0f, 0f);
+                randomXJitter = UnityEngine.Random.Range(0f, RandomRangeLimit);
                 break;
             case HorizontalScriptDirection.Right:
-                VectorDirection = Vector2.right;
+                vectorDirection = Vector2.right;
                 InitialPosition = new Vector3(-12f, 0f, 0f);
+                randomXJitter = UnityEngine.Random.Range(-RandomRangeLimit, 0);
                 break;
             default:
                 throw new System.Exception("Must set direction");
@@ -35,12 +40,11 @@ public class HorizontalSetup : MonoBehaviour
 
         var Trigger = transform.Find("Trigger");
         var horizontalMovement = Trigger.AddComponent<HorizontalMovement>();
-        horizontalMovement.VectorDirection = VectorDirection;
+        horizontalMovement.VectorDirection = vectorDirection;
         horizontalMovement.Speed = Speed;
         horizontalMovement.Target = Target;
 
 
-        var randomXJitter = UnityEngine.Random.Range(-2f, 2f);
         Target.transform.SetPositionAndRotation(new Vector3(InitialPosition.x + randomXJitter, Target.transform.position.y, Target.transform.position.z), quaternion.identity);
 
         if (Direction == HorizontalScriptDirection.Left)

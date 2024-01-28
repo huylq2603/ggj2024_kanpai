@@ -17,7 +17,8 @@ public class CatController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (!this.enabled) {
+        if (!this.enabled)
+        {
             return;
         }
         GameObject otherGameObject = other.gameObject;
@@ -25,7 +26,7 @@ public class CatController : MonoBehaviour
 
         if (layer.Equals(StaticData.Layer.ObstacleWall))
         {
-            direction = -1;
+            direction = -direction;
         }
 
         if (layer.Equals(StaticData.Layer.ObstacleEnvironment))

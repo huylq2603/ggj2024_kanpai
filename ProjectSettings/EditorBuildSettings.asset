@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LastScene.unity
     guid: 38fd4af3df3911046868f4351eae003f
+  - enabled: 1
+    path: Assets/Scenes/ClinkScene2.unity
+    guid: cdbf11d28138c85449619eab68cb086e
+  - enabled: 1
+    path: Assets/Scenes/ClinkScene1.unity
+    guid: 53c5eabfaf264496a836339a1fb9482c
   m_configObjects: {}

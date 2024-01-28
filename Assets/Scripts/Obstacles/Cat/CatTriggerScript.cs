@@ -22,7 +22,9 @@ public class CatTriggerScript : MonoBehaviour
         rb.velocity = new Vector2(0, 0);
         float distance = Vector2.Distance(target.transform.position, cat.transform.position);
 
-        rb.AddForce(((Vector2)(target.transform.position-cat.transform.position)).normalized * distance * 100);
+        Vector2 direction = ((Vector2)(target.transform.position-cat.transform.position)).normalized;
+        rb.GetComponent<SpriteRenderer>().flipX = direction.x < 0;
+        rb.AddForce(direction * distance * 100);
         cat.GetComponent<CircleCollider2D>().isTrigger = true;
     }
 

@@ -82,8 +82,9 @@ public class PlayerController : MonoBehaviour
     {
         GameObject otherGameObject = other.gameObject;
         string layer = LayerMask.LayerToName(otherGameObject.layer);
-        if (layer.Equals(StaticData.Layer.EndingGround) && health > 0)
+        if (!GameManager.IsGameOver && layer.Equals(StaticData.Layer.EndingGround) && health > 0)
         {
+            GameManager.IsGameOver = true;
             StartCoroutine(ClearLevel());
         }
     }
@@ -158,6 +159,7 @@ public class PlayerController : MonoBehaviour
         mainGuyLongNeckObj.SetActive(true);
         GameManager.configWorldSpeed = 0;
         yield return new WaitForSeconds(7f);
+        GameManager.configWorldSpeed = 0.5f;
         GameManager.LoadNextScene();
     }
 

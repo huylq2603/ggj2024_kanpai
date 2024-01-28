@@ -23,7 +23,7 @@ public class CatController : MonoBehaviour
         GameObject otherGameObject = other.gameObject;
         string layer = LayerMask.LayerToName(otherGameObject.layer);
 
-        if (layer.Equals(StaticData.Layer.Wall))
+        if (layer.Equals(StaticData.Layer.ObstacleWall))
         {
             direction = -1;
         }
@@ -31,7 +31,7 @@ public class CatController : MonoBehaviour
         if (layer.Equals(StaticData.Layer.ObstacleEnvironment))
         {
             rb.velocity = new Vector2(0, 0);
-            IEnumerator coroutine = WaitAndJump(Random.Range(0.25f, 0.5f));
+            IEnumerator coroutine = WaitAndJump(Random.Range(0.15f, 0.25f));
             StartCoroutine(coroutine);
         }
     }
@@ -39,6 +39,7 @@ public class CatController : MonoBehaviour
     IEnumerator WaitAndJump(float seconds)
     {
         yield return new WaitForSeconds(seconds);
-        rb.AddForce(new Vector3(200 * direction, 200, 0));
+        rb.GetComponent<SpriteRenderer>().flipX = direction < 0;
+        rb.AddForce(new Vector3(150 * direction, 150, 0));
     }
 }

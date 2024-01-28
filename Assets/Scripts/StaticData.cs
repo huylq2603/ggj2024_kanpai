@@ -13,5 +13,6 @@ public static class StaticData
         public const string Wall = "Wall";
         public const string Obstacle = "Obstacle";
         public const string EndingGround = "EndingGround";
+        public const string ObstacleWall = "ObstacleWall";
     }
 }

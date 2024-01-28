@@ -154,8 +154,6 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("Win");
         freezeControl = true;
-        // gameOverObj.SetActive(true);
-        // TODO: win animation
         bossArmObj.SetActive(true);
         mainGuyLongNeckObj.SetActive(true);
         GameManager.configWorldSpeed = 0;
@@ -168,6 +166,7 @@ public class PlayerController : MonoBehaviour
         if (health < MaxHealth)
         {
             health += 1;
+            sr.sprite = mugSprites[health];
             drunkLevel += 1;
             Debug.Log($"Health: {health}");
             Debug.Log($"Drunk level: {drunkLevel}");

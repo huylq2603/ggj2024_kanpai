@@ -654,6 +654,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1866101543485003039, guid: 12c19658217488847b474d14e24b5113, type: 3}
+      propertyPath: playerBeerMugPos
+      value: 
+      objectReference: {fileID: 1581507266}
     - target: {fileID: 2701578277269095938, guid: 12c19658217488847b474d14e24b5113, type: 3}
       propertyPath: m_Name
       value: MainGuyLongNeck
@@ -2663,6 +2667,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ace16a09802134b24b6a6001fb678e8c, type: 3}
+--- !u!1 &1581507266 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5247678355908152407, guid: ace16a09802134b24b6a6001fb678e8c, type: 3}
+  m_PrefabInstance: {fileID: 1581507265}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1622202749
 PrefabInstance:
   m_ObjectHideFlags: 0

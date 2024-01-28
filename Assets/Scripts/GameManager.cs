@@ -66,5 +66,4 @@ public class GameManager : MonoBehaviour
         string nextSceneName = StaticData.Scenes[isReload ? currentLevel : currentLevel + 1];
         SceneManager.LoadSceneAsync(nextSceneName);
     }
-
 }

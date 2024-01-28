@@ -149,15 +149,15 @@ public class PlayerController : MonoBehaviour
         rd.enabled = false;
         yield return new WaitForSeconds(0.1f);
         rd.enabled = true;
-        yield return new WaitForSeconds(0.1f);
-        rd.enabled = false;
-        yield return new WaitForSeconds(0.1f);
-        rd.enabled = true;
-        yield return new WaitForSeconds(0.1f);
-        rd.enabled = false;
-        yield return new WaitForSeconds(0.1f);
-        rd.enabled = true;
         freezeControl = false;
+        yield return new WaitForSeconds(0.1f);
+        rd.enabled = false;
+        yield return new WaitForSeconds(0.1f);
+        rd.enabled = true;
+        yield return new WaitForSeconds(0.1f);
+        rd.enabled = false;
+        yield return new WaitForSeconds(0.1f);
+        rd.enabled = true;
     }
 
     IEnumerator GameOver()
@@ -187,6 +187,7 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("Win");
         freezeControl = true;
+        r2d.velocity = Vector2.zero;
         bossArmObj.SetActive(true);
         mainGuyLongNeckObj.SetActive(true);
         GameManager.configWorldSpeed = 0;

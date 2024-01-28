@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 88826925
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 485520802, guid: df765e7f857dbdf4b8da114fd13a286c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -158,8 +158,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 88826925
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -279408010, guid: df765e7f857dbdf4b8da114fd13a286c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -185,6 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
+  drunkLevel: 0
   mugSprites:
   - {fileID: -373101426, guid: 08a7816fe6f72584b801321605fe860c, type: 3}
   - {fileID: 299857601, guid: 08a7816fe6f72584b801321605fe860c, type: 3}
@@ -195,6 +196,9 @@ MonoBehaviour:
   dragtolerance: 0
   delta: {x: 0, y: 0, z: 0}
   lastPos: {x: 0, y: 0, z: 0}
+  gameOverObj: {fileID: 0}
+  bossArmObj: {fileID: 0}
+  mainGuyLongNeckObj: {fileID: 0}
 --- !u!50 &707446843054883402
 Rigidbody2D:
   serializedVersion: 4

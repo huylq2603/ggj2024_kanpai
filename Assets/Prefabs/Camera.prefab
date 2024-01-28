@@ -105,8 +105,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5fb790a7b31744349074afec15e3629, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetWidth: 900
-  targetHeight: 1600
+  targetWidth: 12
+  targetHeight: 16
   dynamicMaxWidth: 2560
   dynamicMaxHeight: 1440
   useDynamicWidth: 0
@@ -303,7 +303,7 @@ Transform:
   m_GameObject: {fileID: 8443929537364844465}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.5, y: 0, z: 0}
+  m_LocalPosition: {x: 4.2, y: 0, z: 0}
   m_LocalScale: {x: 0.81642276, y: 16.84682, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -433,7 +433,7 @@ Transform:
   m_GameObject: {fileID: 9002204906443258428}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.5, y: 0, z: 0}
+  m_LocalPosition: {x: -4.2, y: 0, z: 0}
   m_LocalScale: {x: 0.81642276, y: 16.84682, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

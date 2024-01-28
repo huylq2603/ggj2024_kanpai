@@ -583,7 +583,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2570745468745296798, guid: 29d46aec1b2244bff8629d27e753f084, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.2
+      value: -2.48
       objectReference: {fileID: 0}
     - target: {fileID: 2570745468745296798, guid: 29d46aec1b2244bff8629d27e753f084, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1034,7 +1034,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3644024140208929800, guid: ace16a09802134b24b6a6001fb678e8c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6402811722670306968, guid: ace16a09802134b24b6a6001fb678e8c, type: 3}
       propertyPath: bossArmObj
@@ -1167,7 +1167,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2570745468745296798, guid: 29d46aec1b2244bff8629d27e753f084, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.34
+      value: 1.42
       objectReference: {fileID: 0}
     - target: {fileID: 2570745468745296798, guid: 29d46aec1b2244bff8629d27e753f084, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1187,7 +1187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6394508362206330750, guid: 29d46aec1b2244bff8629d27e753f084, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -29.28
+      value: -28.48
       objectReference: {fileID: 0}
     - target: {fileID: 6394508362206330750, guid: 29d46aec1b2244bff8629d27e753f084, type: 3}
       propertyPath: m_LocalPosition.z

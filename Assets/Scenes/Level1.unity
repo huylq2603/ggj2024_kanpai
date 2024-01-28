@@ -1034,7 +1034,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3644024140208929800, guid: ace16a09802134b24b6a6001fb678e8c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6402811722670306968, guid: ace16a09802134b24b6a6001fb678e8c, type: 3}
       propertyPath: bossArmObj

@@ -184,7 +184,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5b0719a2651eaa409ba3cc7eccd1236, type: 3}
---- !u!1 &171714349
+--- !u!1 &146869868
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192,22 +192,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 171714351}
-  - component: {fileID: 171714350}
+  - component: {fileID: 146869870}
+  - component: {fileID: 146869869}
   m_Layer: 0
-  m_Name: office
+  m_Name: InsideAirplane_and_countdown_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!212 &171714350
+--- !u!212 &146869869
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 171714349}
+  m_GameObject: {fileID: 146869868}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -242,28 +242,28 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ca2066cbef47bf54c80f20b50de95f61, type: 3}
+  m_Sprite: {fileID: -405946834, guid: 52b27d7da8fd95d40a2971a17929c54f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 6, y: 3.8125}
+  m_Size: {x: 6, y: 4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &171714351
+--- !u!4 &146869870
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 171714349}
+  m_GameObject: {fileID: 146869868}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.24896836, y: 0.06908071, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -351,11 +351,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7955745922352636286, guid: 2ff1bd54b47385749b27d55534b05923, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.21
+      value: -1.79
       objectReference: {fileID: 0}
     - target: {fileID: 7955745922352636286, guid: 2ff1bd54b47385749b27d55534b05923, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5
+      value: -1.39
       objectReference: {fileID: 0}
     - target: {fileID: 7955745922352636286, guid: 2ff1bd54b47385749b27d55534b05923, type: 3}
       propertyPath: m_LocalPosition.z
@@ -548,5 +548,5 @@ SceneRoots:
   - {fileID: 816541243}
   - {fileID: 26549928}
   - {fileID: 653249253}
-  - {fileID: 171714351}
   - {fileID: 261434304}
+  - {fileID: 146869870}

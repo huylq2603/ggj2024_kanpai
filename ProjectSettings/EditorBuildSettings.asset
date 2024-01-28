@@ -6,14 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/BarAfterIntro.unity
-    guid: 630bf6c9c5740434d92b4278a42e77ea
+    path: Assets/Scenes/BarIntro.unity
+    guid: 77191b1560eb9b14794cf918898ac30e
   - enabled: 1
     path: Assets/Scenes/AnimationIntro.unity
     guid: 9a7ae23dbe3f87948af59bc23315f102
   - enabled: 1
-    path: Assets/Scenes/BarIntro.unity
-    guid: 77191b1560eb9b14794cf918898ac30e
+    path: Assets/Scenes/BarAfterIntro.unity
+    guid: 630bf6c9c5740434d92b4278a42e77ea
   - enabled: 1
     path: Assets/Scenes/Level1Intro.unity
     guid: a21e8069f244d7142a27dad288c8a431
@@ -21,8 +21,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Level1.unity
     guid: 66572cfe41b28be4db973e1786c110c1
   - enabled: 1
-    path: Assets/Scenes/TestLevel.unity
-    guid: 13799090855884c7babc338732882eeb
+    path: Assets/Scenes/Level2Intro.unity
+    guid: a03a9f9fd771e2c47b2b0d76b45b1a72
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: fa246b77cbb7f411ca27c958eef1ddd7
   - enabled: 1
     path: Assets/Scenes/LastScene.unity
     guid: 38fd4af3df3911046868f4351eae003f
